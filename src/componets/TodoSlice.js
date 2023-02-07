@@ -7,7 +7,9 @@ const initialState ={
     name:'todos',
     initialState,
     reducers:{
-        addTodo:(state,action)=>{} 
+        addTodo:(state,action)=>{
+            state.todos.push(action.payload)
+        } 
     },
   })
 

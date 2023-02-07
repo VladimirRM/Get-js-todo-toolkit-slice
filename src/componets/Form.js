@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Form = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <form onSubmit={(e) => e.preventDefault()}>
+    
+  </form>;
+};
 
-export default Form
+export default Form;
