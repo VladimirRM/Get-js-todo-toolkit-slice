@@ -1,6 +1,9 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 
 const TodoItem = ({todo}) => {
+
+    const dispatch = useDispatch()
 
     return (
         <div className='flex justify-between items-center my-2'>
