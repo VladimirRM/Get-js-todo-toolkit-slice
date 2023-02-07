@@ -6,7 +6,7 @@ const Form = () => {
     placeholder="Type something"
     
     />
-    <button type="submit"></button>
+    <button type="submit">Submit</button>
   </form>;
 };
 
