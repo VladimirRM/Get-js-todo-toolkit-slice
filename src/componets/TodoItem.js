@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import toggleCompletedTodo from "./todoSlice";
+import {toggleCompletedTodo,removeTodo} from "./todoSlice";
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
@@ -8,6 +8,10 @@ const TodoItem = ({ todo }) => {
   const toggleTodoHandler = (id) => {
     dispatch(toggleCompletedTodo(id));
   };
+
+  const removeTodoHandler =()=>{
+    
+  }
 
   return (
     <div className="flex justify-between items-center my-2">
