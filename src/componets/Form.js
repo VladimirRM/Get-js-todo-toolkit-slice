@@ -10,7 +10,7 @@ const [todoValue,setTodoValue]=useState('')
 const addTodoHandler =()=>{
     const todo ={
         id: uuidv4(),
-        text:'',
+        text:todoValue,
         completed: false,
     }
 }
@@ -18,7 +18,7 @@ const addTodoHandler =()=>{
   return <form onSubmit={(e) => e.preventDefault()}>
     <input type="text"
     placeholder="Type something"
-    
+    onChange={(e)=>setTodoValue(e.target.value)}
     />
     <button type="submit">Submit</button>
   </form>;
