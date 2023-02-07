@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Form />
       {todos?.map((todo) => (
-        <TodoItem key={todo.id} value={todo} />
+        <TodoItem key={todo.id} todo={todo} />
       ))}
     </div>
   );
