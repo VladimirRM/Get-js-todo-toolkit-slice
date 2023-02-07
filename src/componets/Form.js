@@ -1,15 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "./todoSlice";
+import { uuid } from 'uuidv4'
 
 const Form = () => {
 const dispatch = useDispatch( )
+const [todoValue,setTodoValue]=useState('')
 
 const addTodoHandler =()=>{
     const todo ={
-        id: '',
+        id: uuidv4(),
         text:'',
-        completed: 
+        completed: false,
     }
 }
 
