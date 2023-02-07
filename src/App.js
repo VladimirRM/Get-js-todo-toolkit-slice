@@ -1,10 +1,11 @@
 // import TodoSlice from './componets/TodoSlice';
 import './App.css';
+import Form from './componets/Form';
 
 function App() {
   return (
     <div className="App">
-   
+   <Form/>
     </div>
   );
 }

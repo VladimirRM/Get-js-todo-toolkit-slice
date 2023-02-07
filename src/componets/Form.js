@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "./todoSlice";
-import { uuid } from 'uuidv4'
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = () => {
 const dispatch = useDispatch( )
@@ -13,14 +13,16 @@ const addTodoHandler =()=>{
         text:todoValue,
         completed: false,
     }
+    dispatch(addTodo(todo))
 }
 
   return <form onSubmit={(e) => e.preventDefault()}>
     <input type="text"
     placeholder="Type something"
     onChange={(e)=>setTodoValue(e.target.value)}
+    value={todoValue}
     />
-    <button type="submit">Submit</button>
+    <button type="submit" onClick={addTodoHandler}>Submit</button>
   </form>;
 };
 
