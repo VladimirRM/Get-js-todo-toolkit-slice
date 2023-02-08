@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import {toggleCompletedTodo,removeTodo} from "./todoSlice";
+import { toggleCompletedTodo, removeTodo } from "./todoSlice";
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
@@ -9,14 +9,16 @@ const TodoItem = ({ todo }) => {
     dispatch(toggleCompletedTodo(id));
   };
 
-  const removeTodoHandler =(id)=>{
-        dispatch(removeTodo(id))
-  }
+  const removeRemoveTodoHandler = (id) => {
+    dispatch(removeTodo(id));
+  };
 
   return (
     <div className="flex justify-between items-center my-2">
-      <div  onClick={()=>toggleTodoHandler(todo.id)}
-      className="text-sm px-4 py-2 cursor-pointer bg-lime-300 hover:bg-lime-400">
+      <div
+        onClick={() => toggleTodoHandler(todo.id)}
+        className="text-sm px-4 py-2 cursor-pointer bg-lime-300 hover:bg-lime-400"
+      >
         Complete
       </div>
       <div
@@ -27,7 +29,10 @@ const TodoItem = ({ todo }) => {
         Todo Text
         {todo.text}
       </div>
-      <div  onClick={()=>removeTodoHandler(todo.id)} className="text-sm px-4 py-2 flex bg-red-400 hover:bg-red-500 transition-all text-white cursor-pointer">
+      <div
+        onClick={() => removeRemoveTodoHandler(todo.id)}
+        className="text-sm px-4 py-2 flex bg-red-400 hover:bg-red-500 transition-all text-white cursor-pointer"
+      >
         Delete
       </div>
     </div>

@@ -4,13 +4,19 @@ import Form from "./componets/Form";
 import TodoItem from "./componets/TodoItem";
 
 function App() {
-  const todos = useSelector((state) => state.todo.todos);
+  const todos =useSelector((state)=>state.todo.todos)
+
   return (
     <div className="App">
-      <Form />
-      {todos?.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} />
-      ))}
+     <Form/>
+     {todos?.map(todo=>(
+     <TodoItem
+     key={todo.id}
+      todo={todo}
+
+     />
+          
+     ))}
     </div>
   );
 }
