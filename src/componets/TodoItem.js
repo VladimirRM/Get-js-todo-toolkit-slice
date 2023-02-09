@@ -9,7 +9,7 @@ const TodoItem = ({ todo }) => {
     dispatch(toggleCompletedTodo(id));
   };
 
-  const removeRemoveTodoHandler = (id) => {
+  const removeTodoHandler = (id) => {
     dispatch(removeTodo(id));
   };
 
@@ -30,7 +30,7 @@ const TodoItem = ({ todo }) => {
         {todo.text}
       </div>
       <div
-        onClick={() => removeRemoveTodoHandler(todo.id)}
+        onClick={() => removeTodoHandler(todo.id)}
         className="text-sm px-4 py-2 flex bg-red-400 hover:bg-red-500 transition-all text-white cursor-pointer"
       >
         Delete
